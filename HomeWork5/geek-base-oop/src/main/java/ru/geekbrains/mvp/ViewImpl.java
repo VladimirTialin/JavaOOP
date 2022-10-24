@@ -31,7 +31,4 @@ public class ViewImpl implements View {
         out.print("1. Сложение\n2. Вычитание\n3. Умножение\n4. Деление\n" );
         return scn.nextInt();
     }
-    public void printDiv(double div){
-        out.printf("%.2f",div);
-    }
 }

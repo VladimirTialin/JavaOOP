@@ -29,8 +29,7 @@ public class Presenter {
                 break;
             }
             case 4:{
-                view.print(model.getFirst()+" / "+model.getSecond()+" = ");
-                view.printDiv(model.getDiv());
+                view.print(model.getFirst()+" / "+model.getSecond()+" = "+model.getDiv());
                 break;
             }
             default:
