@@ -32,7 +32,7 @@ public class Model {
         return first * second;
     }
     public double getDiv() {;
-        if (second!=0) return first /Double.valueOf(second);
+        if (second!=0) return first /(double)(second);
         else throw new RuntimeException("Делить на ноль нельзя!");
     }
 
