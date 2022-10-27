@@ -11,7 +11,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 public class Server {
-    private static final String WWW = "C:\\Users\\Владимир\\Desktop\\JavaOOP\\HomeWork6\\geek-base-oop\\www";
+    private static final String WWW = " ";
     public static void main(String[] args) {
         try {
             ServerSocket serverSocket = new ServerSocket(8080);
@@ -31,17 +31,17 @@ public class Server {
                 while (reader.ready()) {
                     System.out.println(reader.readLine());
                 }
-                Path filePath = Path.of(WWW, temp[1]);
-                if (Files.exists(filePath) && !Files.isDirectory(filePath)) {
-                    writer.println("HTTP/1.1 200 OK");
-                    writer.println("Content-Type: text/html; charset=utf-8");
-                    writer.println();
-                    try (BufferedReader br = Files.newBufferedReader(filePath)) {
-                        br.transferTo(writer);
-                    }
-                    writer.flush();
-                    continue;
-                }
+//                Path filePath = Path.of(WWW, temp[1]);
+//                if (Files.exists(filePath) && !Files.isDirectory(filePath)) {
+//                    writer.println("HTTP/1.1 200 OK");
+//                    writer.println("Content-Type: text/html; charset=utf-8");
+//                    writer.println();
+//                    try (BufferedReader br = Files.newBufferedReader(filePath)) {
+//                        br.transferTo(writer);
+//                    }
+//                    writer.flush();
+//                    continue;
+//                }
                 writer.println("HTTP/1.1 404 OK");
                 writer.println("Content-Type: text/html; charset=utf-8");
                 writer.println();
