@@ -7,3 +7,4 @@ public class Apple extends Fruit {
         return 0.2;
     }
 }
+
